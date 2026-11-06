@@ -1,91 +1,386 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>PPRO installer slideshow</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/styles.css">
+<title>Sougk Online | سوقك أونلاين</title>
+
 <style>
-html {
-		background-color: #fff;
+* {
+  box-sizing: border-box;
 }
-* {box-sizing: border-box;}
+
 body {
-	margin:0px;}
-.mySlides {opacity: 0; position: absolute; transition: all 1s;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 445px;
-  position: relative;
-  margin: auto;
-  cursor: pointer;
+  margin: 0;
+  background: #f2f6f8;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #243642;
+  line-height: 1.7;
 }
 
-/* Caption text */
-.text {
-  font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #fff;
-  font-weight: 450;
-  font-size: 15px;
-  letter-spacing: .3;
-  padding-left: 20px;
-  position: absolute;
-  bottom: 95px;
-  width: 30%;
+header {
+  background: #079cba;
+  color: white;
+  padding: 35px 15px;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-	font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #f2f2f2;
+header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+header p {
+  margin: 7px 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.notice {
+  background: white;
+  padding: 14px;
+  border-radius: 10px;
+  color: #697985;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.section {
+  background: #fff;
+  border: 1px solid #dce6eb;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.section h2 {
+  margin: 0;
+  padding: 15px 20px;
+  background: #e8f8fc;
+  border-right: 5px solid #079cba;
+  font-size: 20px;
+}
+
+.section h2 span {
+  display: block;
   font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  color: #67818d;
+  font-weight: normal;
+  direction: ltr;
+  text-align: right;
 }
 
-.active {
-  background-color: #717171;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e2e8ec;
+  overflow-wrap: anywhere;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .7}
-  to {opacity: 1}
+td:first-child {
+  width: 37%;
+  background: #fafcfd;
+  font-weight: bold;
 }
 
-@keyframes fade {
-  from {opacity: .1}
-  to {opacity: 1}
+.status {
+  color: #14844c;
+  font-weight: bold;
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+a {
+  color: #078eac;
+  text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+button {
+  border: 0;
+  background: #079cba;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button.secondary {
+  background: #334a58;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #748590;
+  font-size: 13px;
+  background: white;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .section h2 {
+    font-size: 18px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .container {
+    margin: 10px auto;
+  }
+
+  .section {
+    break-inside: avoid;
+  }
 }
 </style>
 </head>
+
 <body>
-<div class="slideshow-container" id="slideContainer" href="#">
 
-<div class="mySlides fade" style="opacity: 1; visibility: visible;">
-    <video class="videos" autoplay loop muted style="width: 445px; height: 239px;"><source src="images/01_creativity_for_all_445x239.mp4" style="width: 445px; height: 239px;"></video>
-    <div class="text" id="slideText1">Creativity for all.</div>
+<header>
+  <h1>Sougk Online</h1>
+  <p>سوقك أونلاين</p>
+  <p>معلومات السجل التجاري والترخيص</p>
+  <p>Commercial Registration & License Information</p>
+</header>
+
+<div class="container">
+
+  <div class="notice">
+    هذه صفحة إلكترونية لعرض البيانات الواردة
+    في المستند المرفق، وليست شهادة رسمية أو
+    وسيلة للتحقق من صحة الترخيص.
+  </div>
+
+  <!-- Commercial Registration -->
+
+  <section class="section">
+    <h2>
+      بيانات السجل التجاري
+      <span>Commercial Registration Information</span>
+    </h2>
+
+    <table>
+      <tr>
+        <td>رقم السجل التجاري</td>
+        <td>1045467</td>
+      </tr>
+
+      <tr>
+        <td>اسم السجل التجاري</td>
+        <td>سوقك أونلاين - Sougk Online</td>
+      </tr>
+
+      <tr>
+        <td>الشكل القانوني</td>
+        <td>من الشركات الكبرى</td>
+      </tr>
+
+      <tr>
+        <td>حالة السجل</td>
+        <td class="status">نشط - Active</td>
+      </tr>
+
+      <tr>
+        <td>تاريخ التسجيل</td>
+        <td>2022/08/20</td>
+      </tr>
+
+      <tr>
+        <td>استثمار أجنبي</td>
+        <td>نعم - Yes</td>
+      </tr>
+
+      <tr>
+        <td>تاريخ الانتهاء</td>
+        <td>11/12/2028</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Contact Information -->
+
+  <section class="section">
+    <h2>
+      معلومات الاتصال
+      <span>Contact Information</span>
+    </h2>
+
+    <table>
+      <tr>
+        <td>تاريخ التسجيل</td>
+        <td>2022/08/20</td>
+      </tr>
+
+      <tr>
+        <td>رقم الجوال</td>
+        <td>
+          <a href="tel:+966571694265">
+            +966571694265
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>البريد الإلكتروني</td>
+        <td>
+          <a href="mailto:admin@gf6h.hithub.io">
+            admin@gf6h.hithub.io
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>الموقع الإلكتروني</td>
+        <td>gf6h.hithub.io</td>
+      </tr>
+
+      <tr>
+        <td>العنوان</td>
+        <td>
+          طريق الملك سلمان، العليا،
+          الرياض، 14539،
+          المملكة العربية السعودية
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- License Information -->
+
+  <section class="section">
+    <h2>
+      بيانات الترخيص
+      <span>License Information</span>
+    </h2>
+
+    <table>
+      <tr>
+        <td>رقم الترخيص</td>
+        <td>L4654672</td>
+      </tr>
+
+      <tr>
+        <td>اسم الترخيص</td>
+        <td>
+          خدمات الترويج والتسويق على
+          المواقع الإلكترونية ووسائل
+          التواصل الاجتماعي (البلديات)
+        </td>
+      </tr>
+
+      <tr>
+        <td>License Name</td>
+        <td dir="ltr">
+          Marketing and Promotion Services
+          on Social Media (Municipalities)
+        </td>
+      </tr>
+
+      <tr>
+        <td>مدة الترخيص</td>
+        <td>12 شهرًا</td>
+      </tr>
+
+      <tr>
+        <td>الإصدار الأول</td>
+        <td>25/06/2024</td>
+      </tr>
+
+      <tr>
+        <td>تاريخ الإصدار</td>
+        <td>2022/08/20</td>
+      </tr>
+
+      <tr>
+        <td>تاريخ الانتهاء</td>
+        <td>11/12/2028</td>
+      </tr>
+
+      <tr>
+        <td>تعريف الترخيص</td>
+        <td>LD-1673</td>
+      </tr>
+
+      <tr>
+        <td>الجهة المذكورة في الترخيص</td>
+        <td>
+          وزارة التجارة والصناعة وترويج الاستثمار
+          - تراخيص التجارة الإلكترونية
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <div class="actions">
+    <button onclick="window.print()">
+      طباعة الصفحة
+    </button>
+
+    <button class="secondary" onclick="copyInfo()">
+      نسخ بيانات السجل
+    </button>
+  </div>
+
 </div>
 
-</div>
+<footer>
+  Sougk Online © 2026
+  <p>
+    صفحة عرض معلومات غير رسمية
+  </p>
+</footer>
 
-<script type="text/javascript" src="lib/jquery.min.js"></script>
-<script type="text/javascript" src="carousel.js"></script>
+<script>
+function copyInfo() {
+  const text =
+    "Sougk Online\n" +
+    "Registration Number: 1045467\n" +
+    "License Number: L4654672\n" +
+    "Mobile: +966571694265";
+
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  const copied = document.execCommand("copy");
+  document.body.removeChild(textarea);
+
+  alert(copied ? "تم نسخ البيانات" : "تعذر النسخ");
+}
+</script>
+
 </body>
 </html>
